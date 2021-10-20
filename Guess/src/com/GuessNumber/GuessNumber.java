@@ -10,7 +10,7 @@ public class GuessNumber {
         Boolean w = false;
         int flag = 1;
         Scanner scan = new Scanner(System.in);
-        System.out.println(a);
+
         System.out.println("Hello! what is your name?");
         String name = scan.nextLine();
 

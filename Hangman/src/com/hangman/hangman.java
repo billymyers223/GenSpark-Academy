@@ -113,6 +113,10 @@ public class hangman {
                     break;
                 }
                 System.out.println("Wrong guesses:" + wrong );
+                for (int i = 0; i < disp.length; i++) {
+                    System.out.println(disp[i]);
+
+                }
                 System.out.println("Wrong guess again!");
                 guess =scan.nextLine();
             }
