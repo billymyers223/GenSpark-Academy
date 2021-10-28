@@ -136,34 +136,37 @@ public class HumansVSGoblins {
         char k = 'G';
         if(isPlayer){
             k = 'H';
+            System.out.println("Human move!\n~~~~~~");
+        }else{
+            System.out.println("Goblin move!\n~~~~~~");
         }
         if(input ==1  ){
             board[0][0] = k;
-            printMap(board);
+
         } else if(input ==2){
             board[0][1] = k;
-            printMap(board);
+
         } else if(input ==3){
             board[0][2] = k;
-            printMap(board);
+
         } else if(input ==4){
             board[1][0] = k;
-            printMap(board);
+
         } else if(input ==5){
             board[1][1] = k;
-            printMap(board);
+
         } else if(input ==6){
             board[1][2] = k;
-            printMap(board);
+
         } else if(input ==7){
             board[2][0] = k;
-            printMap(board);
+
         } else if(input ==8){
             board[2][1] = k;
-            printMap(board);
+
         } else if(input ==9){
             board[2][2] = k;
-            printMap(board);
+
         }
 
         if(prev ==1  ){
