@@ -9,7 +9,11 @@ public class Input {
 
     int choice;
     List<Integer> coordShip = new ArrayList<>();
+    public String playerName(){
+        Scanner scan = new Scanner(System.in);
 
+        return scan.nextLine();
+    }
     public List<Board>getBoards(){
         generateBoard();
         return boards;
@@ -52,11 +56,11 @@ public class Input {
         return coordShip;
     }
 
-    public Ship createShip(int player){
-        int gPlayer = player+1;
+    public Ship createShip(int player, String name){
+
         Plot shipPart;
         Ship ship;
-        System.out.println("Player "+ gPlayer + " please place your ship");
+        System.out.println(name + " please place your ship");
         coordShip = inputCoordsShipType();
         int row = coordShip.get(0);
         int col = coordShip.get(1);
@@ -67,9 +71,9 @@ public class Input {
         return ship;
     }
 
-    public int[] shoot(int player){
-        int gamePlayer = player+1;
-        System.out.println("Player "+ gamePlayer + " Choose where to fire");
+    public int[] shoot(String name){
+
+        System.out.println(name + " Choose where to fire");
         System.out.println("Row: ");
         int row = scan.nextInt();
         System.out.println("Column: ");
