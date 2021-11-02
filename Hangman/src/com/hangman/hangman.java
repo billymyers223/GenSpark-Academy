@@ -30,7 +30,13 @@ public class hangman {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("\nGuess the word by letter! You have 5 attempts!");
-        String guess = scan.nextLine();
+        String guess = "";
+        try {
+            guess = scan.nextLine();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
         guess = guess.toLowerCase(Locale.ROOT);
         String dispWord = "";
 
@@ -96,7 +102,11 @@ public class hangman {
                     }
 
                     System.out.println("\nGuess again");
-                    guess =scan.nextLine();
+                    try {
+                        guess = scan.nextLine();
+                    }catch (Exception e){
+                        System.out.println(e);
+                    }
                 }
             }else{
 
@@ -114,11 +124,15 @@ public class hangman {
                 }
                 System.out.println("Wrong guesses:" + wrong );
                 for (int i = 0; i < disp.length; i++) {
-                    System.out.println(disp[i]);
+                    System.out.print(disp[i]);
 
                 }
-                System.out.println("Wrong guess again!");
-                guess =scan.nextLine();
+                System.out.println("\nWrong guess again!");
+                try {
+                    guess = scan.nextLine();
+                }catch (Exception e){
+                    System.out.println(e);
+                }
             }
 
         }

@@ -47,7 +47,7 @@ public class Game {
         while (gameOn){
             int[] shotCoords;
             shotCoords = board1.shoot(p1Name);
-            if(player2.handleShot(shotCoords[0],shotCoords[1],0)){
+            if(player2.handleShot(shotCoords[0],shotCoords[1],p1Name)){
                 display.printBoard(player1.getBoard());
                 numShipsP2--;
                 if(numShipsP2 == 0){
@@ -65,7 +65,7 @@ public class Game {
             }
             //player 2
             shotCoords = board1.shoot(p2Name);
-            if(player1.handleShot(shotCoords[0],shotCoords[1], 1)){
+            if(player1.handleShot(shotCoords[0],shotCoords[1], p2Name)){
                 display.printBoard(player1.getBoard());
                 numShipsP1--;
             }else{

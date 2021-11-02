@@ -15,7 +15,14 @@ public class GuessNumber {
         String name = scan.nextLine();
 
         System.out.println("Well, " + name+ " I am thinking of a number between 1 and 20 \nTake a guess");
-        int guess = scan.nextInt();
+        int guess =0;
+        try {
+            guess = scan.nextInt();
+        }
+        catch (Exception e){
+            System.out.println("Input incorrect please input an integer");
+            scan.nextInt();
+        }
 
         while (w == false){
             if(flag ==6){

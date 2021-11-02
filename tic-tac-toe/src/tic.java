@@ -61,12 +61,21 @@ public class tic {
     public static void moves(char [][] board){
         Scanner scan = new Scanner(System.in);
        System.out.println("Type a number between 1-9 to place your X");
-       int input = scan.nextInt();
+       int input = 0;
+       try {
+           input = scan.nextInt();
+       }catch (Exception e){
+           System.out.println(e);
+       }
        boolean valid = isValid(input, board);
 
        while (!valid){
            System.out.println("Please input another move 1-9, the one you entered was not valid");
-           input = scan.nextInt();
+           try {
+               input = scan.nextInt();
+           }catch (Exception e){
+               System.out.println(e);
+           }
            valid = isValid(input, board);
        }
 

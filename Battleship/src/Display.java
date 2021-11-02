@@ -17,7 +17,7 @@ public class Display {
             if(i<10){
                 System.out.print(i+ "  ");
             } else{
-                System.out.print(" ");
+                System.out.print(i + " ");
             }
         }
         System.out.println(" ");
@@ -25,7 +25,7 @@ public class Display {
             if(r<10){
                 System.out.print(r + " ");
             }else{
-                System.out.print(" ");
+                System.out.print(r + " ");
             }
             for(int c = 0; c< board.getSizeY(); c++){
                 switch (board.getPlot(r, c).getChar()) {

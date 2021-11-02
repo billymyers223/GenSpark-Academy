@@ -104,12 +104,20 @@ public class HumansVSGoblins {
     public static int moves(char [][] board){
         Scanner scan = new Scanner(System.in);
         System.out.println("Type a N/E/S/W to move the human");
-        String input = scan.nextLine();
-
+        String input = "";
+        try {
+            input = scan.nextLine();
+        }catch (Exception e){
+            System.out.println(e);
+        }
         int valid = isValid(input, true, board);
         while (valid ==0){
             System.out.println("Please input a different direction");
-            input = scan.nextLine();
+            try {
+                input = scan.nextLine();
+            }catch (Exception e){
+                System.out.println(e);
+            }
             valid = isValid(input, true,board);
         }
         if(valid == 3){

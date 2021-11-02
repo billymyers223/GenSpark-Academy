@@ -23,13 +23,13 @@ public class Player {
         return sumAll;
     }
 
-    public boolean handleShot(int x, int y, int player){
+    public boolean handleShot(int x, int y, String player){
         for(Ship ship: ships){
             for(Plot plot: ship.getFields()){
                 if(plot.getX() == x && plot.getY() == y && plot.getPlotStatus().equals(PlotStatus.SHIP)){
                     plot.setPlotStatus(PlotStatus.HIT);
                     board.getPlot(x,y).setPlotStatus(PlotStatus.HIT);
-                    System.out.println("HIT!");
+                    System.out.println("HIT!\n-------------------");
                     return true;
                 }else if(plot.getX() ==x && plot.getY() == y && plot.getPlotStatus().equals(PlotStatus.HIT)){
                     plot.setPlotStatus(PlotStatus.HIT);
@@ -40,7 +40,7 @@ public class Player {
             }
         }
         board.getPlot(x,y).setPlotStatus(PlotStatus.MISSED);
-        System.out.println("You missed Player " + (player+1) +"!");
+        System.out.println("You missed " + player +"!");
         return false;
     }
 

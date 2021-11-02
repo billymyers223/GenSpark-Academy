@@ -12,7 +12,14 @@ public class DragonCave {
                 "\n" +
                 "Which cave will you go into? (1 or 2)");
         Scanner scan = new Scanner(System.in);
-        int num = scan.nextInt();
+        int num = 0;
+        try {
+            num = scan.nextInt();
+        }catch (Exception e){
+            System.out.println("please try again");
+            num = scan.nextInt();
+        }
+
 
         if(num ==1){
             System.out.println("You approach the cave...\n" +
